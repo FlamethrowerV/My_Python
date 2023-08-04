@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
-
-{% block title %} Топ-продавцов {% endblock %}
+{% load static %}
+{% block title %}Топ продовцов{% endblock %}
 {% block content %}
   <ul class="nav nav-pills sticky-top bg-white nav-fill">
     <li class="nav-item">
-      <a class="nav-link"  href="/">
+      <a class="nav-link"  href="{% url 'main-page' %}">
         <span style="font-weight: bold;">Главная</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="top-sellers.html"><span style="font-weight: bold;">Топ продавцов</span>
+      <a class="nav-link active" aria-current="page" href="{% url 'top-sellers' %}"><span style="font-weight: bold;">Топ продавцов</span>
       </a>
     </li>
     <li class="nav-item">
@@ -47,6 +47,7 @@
   </div>
   <div class="container" style="min-height: 452px">
     <ul class="list-group list-group-numbered">
+
       <li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-2 me-auto">
           <div class="fw-bold">Ваня
@@ -101,4 +102,4 @@
       </div>
     </nav>
   </footer>
-{% endblock %}
+  {% endblock %}
